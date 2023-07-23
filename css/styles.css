@@ -1,0 +1,96 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#map {
+  height: 97%;
+}
+
+.countryLabel{
+background: rgba(255, 255, 255, 0);
+border:0;
+border-radius:0px;
+box-shadow: 0 0px 0px;  
+font-weight: bold;
+font-size: 30px;
+color: blue;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+font-family: sans; color: yellow;
+}
+
+
+
+
+.customheader {
+  border: 2px solid firebrick !important;
+  border-radius: 5px !important;
+  text-align: center !important;
+  background-color: firebrick !important;
+  color: whitesmoke !important;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  /* background: rgb(50 251 226 / 30%); */
+  /* color: #170229; */
+  box-shadow: 0 3px 14px rgb(111 66 193 / 90%);
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 1px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+th {
+  border: 1px solid #e44c55;
+  text-align: left;
+  padding: 8px;
+  background-color: #e44c558f;
+  color: white;
+}
+
+td {
+  border: 1px solid #e44c55;
+  text-align: left;
+  padding: 8px;
+  background-color: #32fbe24d;
+  color: black;
+}
+
+
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+  .info h4 {
+      margin: 0 0 5px;
+      color: #777;
+  }
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+
+  .legend i {
+      width: 25px;
+      height: 25px;
+      float:left;
+      margin-right: 4px;
+      opacity: 0.7;
+  }
+
+  .ui-widget.ui-widget-content
+  {
+      z-index: 999;
+  }
