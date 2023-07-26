@@ -142,16 +142,24 @@
     div.setAttribute("style","height:500px;width:400px;background:white");
     div.setAttribute("id","searchDiv");
 
-    div.innerHTML="<div>Select District <select id=\"idDistrict\" class=\"form-control\"><option>Dehradun</option></select>"+
-        "</br></br>Select Tehsil <select id=\"idBlock\" class=\"form-control\"><option>Select Tehsil</option></select>"+
-        "</br></br>Select Village <select id=\"idVillage\" class=\"form-control\"><option>Select Village</option></select>"+
-        "</br><div style=\"text-align:center\"><input type=\"button\" style=\"display:none \" class=\"btn btn-primary btn-sm\" id=\"btnSearch\" value=\"Search\"></button></div>"+
-        "</br><div style=\"height: 220px; overflow-y: scroll; \"><table id=\"idTableInfo\" style=\"width:100%\"><tbody style=\"background-color: white;\"><tr><th>Attribute</th><th>Value</th></tr>"+
-            "<tr><td>Total Population</td><td id=\"idPop\" style=\"background-color: #32fb6375;\"></td></tr>"+
-            "<tr><td>Male Population</td><td id=\"idMpop\" style=\"background-color: #fb323f66;\"></td></tr>"+
-            "<tr><td>Female Population</td><td id=\"idFPop\" style=\"background-color: #fb323f66;\"></td></tr>"+
-			"<tr><td>Area</td><td id=\"idArea\" style=\"background-color: #fb323f66;\"></td></tr>"+            
-            "</tbody></table></div></div>";
+    div.innerHTML="<div>Select District <select id=\"idDistrict\" class=\"form-control\"><option>Uttar Pradesh</option><option>Madhya Pradesh</option></select>"+
+                "</br>Select Tehsil <select id=\"idBlock\" class=\"form-control\"><option>Select Tehsil</option></select>"+
+                "</br>Select Village <select id=\"idVillage\" class=\"form-control\"><option>Select Village</option></select>"+
+                "</br><div style=\"text-align:center\"><input type=\"button\" style=\"display:none \" class=\"btn btn-primary btn-sm\" id=\"btnSearch\" value=\"Search\"></button></div>"+
+                "</br><div style=\"height: 220px; overflow-y: scroll; \"><table id=\"idTableInfo\" style=\"width:100%\"><tbody style=\"background-color: white;\"><tr><th>Attribute</th><th>Value</th></tr>"+
+                    "<tr><td>Total Population</td><td id=\"idPop\" style=\"background-color: #32fb6375;\"></td></tr><tr><td>Literate</td><td id=\"idLit\" style=\"background-color: #4d32fb66;\"></td></tr><tr><td>Area</td><td id=\"idArea\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>No. Of College</td><td id=\"idColl\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>No. Of Medical Facility</td><td id=\"idMedical\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Tap</td><td id=\"idTap\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Well</td><td id=\"idWell\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Tubewell</td><td id=\"idTubewell\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Handpump</td><td id=\"idHandpump\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>River</td><td id=\"idRiver\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Canal</td><td id=\"idCanal\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Post Office</td><td id=\"idPost\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Telecom Office</td><td id=\"idTel\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "<tr><td>Bank</td><td id=\"idBank\" style=\"background-color: #fb323f66;\"></td></tr>"+
+                    "</tbody></table></div></div>";
 
     return div;
 };
@@ -234,10 +242,22 @@ $('#idDistrict').on('change', function (e) {
             bounds = L.latLngBounds(southWest, northEast);
             map.fitBounds(bounds);
 
+
+
             $('#idTableInfo').find('#idPop').html(lstObjVillage[0].properties.TOT_P);
-            $('#idTableInfo').find('#idMpop').html(lstObjVillage[0].properties.TOT_M);
-            $('#idTableInfo').find('#idFPop').html(lstObjVillage[0].properties.TOT_F);
+            $('#idTableInfo').find('#idLit').html(lstObjVillage[0].properties.P_LIT);
             $('#idTableInfo').find('#idArea').html(lstObjVillage[0].properties.AREA);
+            $('#idTableInfo').find('#idColl').html(lstObjVillage[0].properties.COLLEGE);
+            $('#idTableInfo').find('#idMedical').html(lstObjVillage[0].properties.MEDI_FAC);
+            $('#idTableInfo').find('#idTap').html(lstObjVillage[0].properties.TAP);
+            $('#idTableInfo').find('#idWell').html(lstObjVillage[0].properties.WELL);
+            $('#idTableInfo').find('#idTubewell').html(lstObjVillage[0].properties.TUBEWELL);
+            $('#idTableInfo').find('#idHandpump').html(lstObjVillage[0].properties.HANDPUMP);
+            $('#idTableInfo').find('#idRiver').html(lstObjVillage[0].properties.RIVER);
+            $('#idTableInfo').find('#idCanal').html(lstObjVillage[0].properties.CANAL);
+            $('#idTableInfo').find('#idPost').html(lstObjVillage[0].properties.POST_OFF);
+            $('#idTableInfo').find('#idTel').html(lstObjVillage[0].properties.TELE_OFF);
+            $('#idTableInfo').find('#idBank').html(lstObjVillage[0].properties.BANK_FAC)
         
 
 
